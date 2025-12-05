@@ -53,21 +53,5 @@ impl Render for Home {
                     tracing::info!("size: {}", size);
                 }),
             ))
-            .child(
-                Checkbox::new("my-checkbox")
-                    .label("Accept terms and conditions")
-                    .checked(false)
-                    .on_click(|checked, _, _| {
-                        println!("Checkbox is now: {}", checked);
-                    }),
-            )
-
-        // div()
-        //     .v_flex()
-        //     .gap_2()
-        //     .size_full()
-        //     .items_center()
-        //     .justify_center()
-        //     .child(Button::new("btn").label("Click Me"))
     }
 }

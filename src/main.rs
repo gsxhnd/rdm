@@ -1,18 +1,21 @@
-use gpui::{AppContext, Application, Window, WindowOptions};
+use gpui::{AppContext, Application, WindowOptions};
 use gpui::{Size, px};
-use gpui_component::{Root, TitleBar, window_border};
+use gpui_component::{Root, TitleBar};
 use gpui_component_assets::Assets;
 
 mod page;
+mod themes;
 
 fn main() {
     tracing_subscriber::fmt::init();
 
     let app = Application::new().with_assets(Assets);
     tracing::error!("preference dir: {:?}", dirs::preference_dir());
+    tracing::error!("current dir: {:?}", std::env::current_dir());
 
     app.run(move |cx| {
         gpui_component::init(cx);
+        themes::init_theme(cx);
 
         cx.spawn(async move |cx| {
             let window_opt = WindowOptions {
@@ -26,8 +29,9 @@ fn main() {
             };
 
             let _ = cx.open_window(window_opt, |window, cx| {
-                let view = cx.new(|_| page::home::Home);
-                // let view = cx.new(|_| page::app::App);
+                // let view = cx.new(|_| page::home::Home);
+                // let view = cx.new(|_| page::setting::Setting);
+                let view = cx.new(|_| page::app::App);
                 cx.new(|cx| Root::new(view, window, cx))
             });
         })
