@@ -97,6 +97,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "69f7f8c3906b62b754cd5326047894316021dcfe5a194c8ea52bdd94934a3457"
 
 [[package]]
+name = "arcstr"
+version = "1.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "03918c3dbd7701a85c6b9887732e2921175f26c350b4563841d0958c21d57e6d"
+
+[[package]]
 name = "arg_enum_proc_macro"
 version = "0.3.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2225,9 +2231,9 @@ dependencies = [
 
 [[package]]
 name = "gpui-component"
-version = "0.5.0-preview2"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6b600febdc128afd24febf1bc4fa3a6b704e6d8521e67aa5e5a245117ff6a1b9"
+checksum = "2dda822a7bab4e0a08a4276ba68e2f82cc5855bf0b377d7b195c58c8061dc7d1"
 dependencies = [
  "aho-corasick",
  "anyhow",
@@ -2264,9 +2270,9 @@ dependencies = [
 
 [[package]]
 name = "gpui-component-assets"
-version = "0.5.0-preview2"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "72a00977ad46e08cfafb0e500647fce9b2a8de0e04daca9890860f1b9dc889c3"
+checksum = "5842ea3f1e596fbc611894dcc0266df7125bc226f603ca313f5460b700503564"
 dependencies = [
  "anyhow",
  "gpui",
@@ -2275,9 +2281,9 @@ dependencies = [
 
 [[package]]
 name = "gpui-component-macros"
-version = "0.5.0-preview2"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c73cc07eab9c69be8858f156043f635ba257ce5d28ddfb1b7586350bdeb918c4"
+checksum = "581a8cd1e38b2fd86d1029dd56a3296ffd1388fda295054104d89923755de902"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -4543,10 +4549,11 @@ dependencies = [
 
 [[package]]
 name = "redis"
-version = "0.32.7"
+version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "014cc767fefab6a3e798ca45112bccad9c6e0e218fbd49720042716c73cfef44"
+checksum = "47ba378d39b8053bffbfc2750220f5a24a06189b5129523d5db01618774e0239"
 dependencies = [
+ "arcstr",
  "bytes",
  "cfg-if",
  "combine",
@@ -4561,6 +4568,7 @@ dependencies = [
  "tokio",
  "tokio-util",
  "url",
+ "xxhash-rust",
 ]
 
 [[package]]
@@ -7337,6 +7345,12 @@ name = "xmlwriter"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec7a2a501ed189703dba8b08142f057e887dfc4b2cc4db2d343ac6376ba3e0b9"
+
+[[package]]
+name = "xxhash-rust"
+version = "0.8.15"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fdd20c5420375476fbd4394763288da7eb0cc0b8c11deed431a91562af7335d3"
 
 [[package]]
 name = "y4m"

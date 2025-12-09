@@ -1,5 +1,6 @@
 use gpui::{AppContext, Application, WindowOptions};
 use gpui::{Size, px};
+use gpui_component::input::InputState;
 use gpui_component::{Root, TitleBar};
 use gpui_component_assets::Assets;
 
@@ -29,9 +30,7 @@ fn main() {
             };
 
             let _ = cx.open_window(window_opt, |window, cx| {
-                // let view = cx.new(|_| page::home::Home);
-                // let view = cx.new(|_| page::setting::Setting);
-                let view = cx.new(|_| page::app::App);
+                let view = cx.new(|cx| page::app::App::new(window, cx));
                 cx.new(|cx| Root::new(view, window, cx))
             });
         })

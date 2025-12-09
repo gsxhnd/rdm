@@ -18,16 +18,6 @@ use gpui_component::resizable::{
 use gpui_component::v_flex;
 
 pub struct Home;
-// {
-// settings_state: ResizableState,
-// }
-
-// impl Home {
-//     pub fn new(cx: &mut Context<Self>) -> Self {
-//         let settings_state = ResizableState::default();
-//         Home { settings_state }
-//     }
-// }
 
 impl Render for Home {
     fn render(
